@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    This layout defines the main activity screen and displays a listtaskEntriesasks (if they exist),
+    and a floating action button that launches another activity.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTasks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp" />
+    <!-- Floating action button that launches AddTaskActivity when clicked -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/add_todo_task"
+        android:src="@android:drawable/ic_input_add"
+        android:tint="@color/white" />
+
+</FrameLayout>
